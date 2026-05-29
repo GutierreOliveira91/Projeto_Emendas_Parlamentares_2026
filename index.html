@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Aplicação acadêmica para visualização de emendas parlamentares de 2026 com gráficos interativos em Vega-Lite.">
+    <title>Análise de Emendas Parlamentares 2026</title>
+
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent" id="gtco-main-nav">
+    <div class="container">
+        <a class="navbar-brand" href="#inicio">Emendas 2026</a>
+        <button class="navbar-toggler" data-target="#my-nav" onclick="myFunction(this)" data-toggle="collapse" aria-label="Alternar navegação">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+        </button>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#metodologia">Metodologia</a></li>
+                <li class="nav-item"><a class="nav-link" href="#graficos">Gráficos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#dados">Dados</a></li>
+                <li class="nav-item"><a class="nav-link" href="#equipe">Equipe</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <a href="#graficos" class="btn btn-outline-dark my-2 my-sm-0 mr-3 text-uppercase">Explorar</a>
+                <a href="#dados" class="btn btn-info my-2 my-sm-0 text-uppercase">Fonte</a>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<main id="inicio">
+    <section class="container-fluid gtco-banner-area hero-academico">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p class="section-kicker">Aplicação web acadêmica</p>
+                    <h1>Análise visual das <span>Emendas Parlamentares</span> de 2026.</h1>
+                    <p>Dashboard desenvolvido em HTML, CSS e JavaScript com Bootstrap, transformando o notebook Observable em uma experiência navegável, responsiva e pronta para avaliação.</p>
+                    <a href="#graficos">Ver gráficos <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-panel">
+                        <div class="hero-panel-header">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="hero-stat">
+                            <strong>9</strong>
+                            <span>visualizações interativas</span>
+                        </div>
+                        <div class="hero-stat">
+                            <strong>3</strong>
+                            <span>indicadores monetários tratados</span>
+                        </div>
+                        <div class="hero-stat">
+                            <strong>2026</strong>
+                            <span>ano de referência orçamentária</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid gtco-feature" id="metodologia">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="method-card">
+                        <div class="method-step">
+                            <span>01</span>
+                            <div>
+                                <h3>Coleta</h3>
+                                <p>Base extraída do Portal da Transparência e disponibilizada em CSV no GitHub.</p>
+                            </div>
+                        </div>
+                        <div class="method-step">
+                            <span>02</span>
+                            <div>
+                                <h3>Tratamento</h3>
+                                <p>Campos monetários foram convertidos do formato brasileiro para valores numéricos.</p>
+                            </div>
+                        </div>
+                        <div class="method-step">
+                            <span>03</span>
+                            <div>
+                                <h3>Visualização</h3>
+                                <p>Os gráficos foram modularizados em JavaScript e renderizados com Vega-Lite.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <h2>Do notebook para uma aplicação organizada.</h2>
+                    <p>O projeto preserva a proposta visual moderna do template, mas reestrutura o conteúdo para fins acadêmicos: introdução, metodologia, gráficos em cards, fonte dos dados e rodapé institucional.</p>
+                    <p><small>Cada visualização fica isolada em um arquivo JS próprio dentro da pasta <strong>/graficos</strong>, enquanto <strong>js/script.js</strong> centraliza o carregamento dos dados e a inicialização.</small></p>
+                    <a href="#dados">Consultar fonte <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid gtco-numbers-block overview-band">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <h5>Funções</h5>
+                        <p>áreas de governo analisadas</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <h5>Autores</h5>
+                        <p>parlamentares e bancadas</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <h5>UFs</h5>
+                        <p>localidades contempladas</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <h5>Valores</h5>
+                        <p>empenhado, liquidado e pago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid charts-section" id="graficos">
+        <div class="container">
+            <div class="section-heading text-center">
+                <p class="section-kicker">Visualizações</p>
+                <h2>Gráficos interativos</h2>
+                <p>As seções abaixo reproduzem os gráficos do notebook Observable em uma interface web acadêmica, com cards independentes e layout responsivo.</p>
+            </div>
+
+            <div class="chart-card" id="secao-grafico1">
+                <div class="chart-copy">
+                    <span class="chart-number">01</span>
+                    <h3>Distribuição de Emendas por Área</h3>
+                    <p>Quantidade total de emendas destinadas a cada função de governo, destacando os setores mais recorrentes.</p>
+                </div>
+                <div class="chart-frame"><div id="grafico1" class="chart-target"></div></div>
+            </div>
+
+            <div class="chart-card" id="secao-grafico2">
+                <div class="chart-copy">
+                    <span class="chart-number">02</span>
+                    <h3>Top 10 Autores por Valor Empenhado</h3>
+                    <p>Autores que concentram os maiores volumes financeiros empenhados no conjunto analisado.</p>
+                </div>
+                <div class="chart-frame"><div id="grafico2" class="chart-target"></div></div>
+            </div>
+
+            <div class="chart-card" id="secao-grafico3">
+                <div class="chart-copy">
+                    <span class="chart-number">03</span>
+                    <h3>Valor Empenhado vs. Valor Pago por Tipo</h3>
+                    <p>Comparativo entre o montante reservado e o valor efetivamente pago em cada categoria de emenda.</p>
+                </div>
+                <div class="chart-frame"><div id="grafico3" class="chart-target"></div></div>
+            </div>
+
+            <div class="chart-card" id="secao-grafico4">
+                <div class="chart-copy">
+                    <span class="chart-number">04</span>
+                    <h3>Proporção por Tipo de Emenda</h3>
+                    <p>Distribuição percentual dos tipos de emenda no total de registros da base.</p>
+                </div>
+                <div class="chart-frame chart-frame-compact"><div id="grafico4" class="chart-target"></div></div>
+            </div>
+
+            <div class="chart-card" id="secao-grafico5">
+                <div class="chart-copy">
+                    <span class="chart-number">05</span>
+                    <h3>Top 15 Localidades que Recebem Recursos</h3>
+                    <p>Estados ou regiões com maior soma de valor empenhado, evidenciando a distribuição territorial.</p>
+                </div>
+                <div class="chart-frame"><div id="grafico5" class="chart-target"></div></div>
+            </div>
+
+            <div class="chart-card" id="secao-grafico6">
+                <div class="chart-copy">
+                    <span class="chart-number">06</span>
+                    <h3>Relação entre Valor Empenhado e Liquidado</h3>
+                    <p>Dispersão entre valores reservados e valores liquidados para observar padrões de execução.</p>
+                </div>
+                <div class="chart-frame"><div id="grafico6" class="chart-target"></div></div>
+            </div>
+
+            <div class="chart-card" id="secao-grafico7">
+                <div class="chart-copy">
+                    <span class="chart-number">07</span>
+                    <h3>Fluxo Orçamentário por Área</h3>
+                    <p>Comparação do fluxo financeiro por área de governo entre empenhado e pago.</p>
+                </div>
+                <div class="chart-frame"><div id="grafico7" class="chart-target"></div></div>
+            </div>
+
+            <div class="chart-card" id="secao-grafico8">
+                <div class="chart-copy">
+                    <span class="chart-number">08</span>
+                    <h3>Top 10 Subfunções mais Atendidas</h3>
+                    <p>Subfunções com maior quantidade de emendas registradas.</p>
+                </div>
+                <div class="chart-frame"><div id="grafico8" class="chart-target"></div></div>
+            </div>
+
+            <div class="chart-card" id="secao-grafico9">
+                <div class="chart-copy">
+                    <span class="chart-number">09</span>
+                    <h3>Top 10 Programas Orçamentários</h3>
+                    <p>Programas do governo federal com os maiores montantes de valor empenhado.</p>
+                </div>
+                <div class="chart-frame"><div id="grafico9" class="chart-target"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid gtco-features-list" id="dados">
+        <div class="container">
+            <div class="row">
+                <div class="media col-md-6 col-lg-4">
+                    <div class="oval mr-4"><i class="fa fa-database" aria-hidden="true"></i></div>
+                    <div class="media-body">
+                        <h5 class="mb-0">Fonte de dados</h5>
+                        Dataset em CSV hospedado no repositório GitHub do projeto, com origem no Portal da Transparência.
+                    </div>
+                </div>
+                <div class="media col-md-6 col-lg-4">
+                    <div class="oval mr-4"><i class="fa fa-code" aria-hidden="true"></i></div>
+                    <div class="media-body">
+                        <h5 class="mb-0">Tecnologias</h5>
+                        HTML, CSS, JavaScript, Bootstrap, Vega, Vega-Lite e Vega-Embed.
+                    </div>
+                </div>
+                <div class="media col-md-6 col-lg-4">
+                    <div class="oval mr-4"><i class="fa fa-line-chart" aria-hidden="true"></i></div>
+                    <div class="media-body">
+                        <h5 class="mb-0">Organização</h5>
+                        Cada gráfico possui seu próprio arquivo JavaScript, facilitando manutenção e avaliação.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid team-section" id="equipe">
+        <div class="container">
+            <div class="section-heading text-center">
+                <p class="section-kicker">Equipe</p>
+                <h2>Membros do projeto</h2>
+                <p>Grupo responsável pela pesquisa, tratamento dos dados e construção da aplicação web acadêmica.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <div class="team-avatar">AF</div>
+                        <h3>André Farias de Lacerda Fialho</h3>
+                        <p>Integrante da equipe</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <div class="team-avatar">GM</div>
+                        <h3>Gutierre de Oliveira Melo</h3>
+                        <p>Integrante da equipe</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <div class="team-avatar">NF</div>
+                        <h3>Nathan Carlos da Silva Freire</h3>
+                        <p>Integrante da equipe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="container-fluid" id="gtco-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6" id="contato">
+                <h4>Projeto Acadêmico</h4>
+                <p>Análise exploratória e visual das Emendas Parlamentares de 2026, baseada em notebook Observable e reorganizada como aplicação web responsiva.</p>
+                <a href="https://observablehq.com/d/bc75e277cef509db" target="_blank" rel="noopener" class="submit-button">Notebook original <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-6">
+                        <h4>Navegação</h4>
+                        <ul class="nav flex-column company-nav">
+                            <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#metodologia">Metodologia</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#graficos">Gráficos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#dados">Dados</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#equipe">Equipe</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <h4>Gráficos</h4>
+                        <ul class="nav flex-column services-nav">
+                            <li class="nav-item"><a class="nav-link" href="#secao-grafico1">Áreas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#secao-grafico2">Autores</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#secao-grafico5">Localidades</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#secao-grafico9">Programas</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <p>&copy; 2026. Aplicação acadêmica desenvolvida com Bootstrap e Vega-Lite.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+<script src="js/script.js"></script>
+<script src="graficos/grafico1.js"></script>
+<script src="graficos/grafico2.js"></script>
+<script src="graficos/grafico3.js"></script>
+<script src="graficos/grafico4.js"></script>
+<script src="graficos/grafico5.js"></script>
+<script src="graficos/grafico6.js"></script>
+<script src="graficos/grafico7.js"></script>
+<script src="graficos/grafico8.js"></script>
+<script src="graficos/grafico9.js"></script>
+</body>
+</html>
