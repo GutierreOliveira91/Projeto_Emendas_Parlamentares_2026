@@ -73,19 +73,8 @@ https://observablehq.com/d/bc75e277cef509db
 
 ## Como executar o projeto
 
-Como o projeto carrega dados externos via `fetch`, recomenda-se executar com um servidor local.
-
-No terminal, dentro da pasta do projeto, execute:
-
-```bash
-python -m http.server 8080
-```
-
-Depois acesse no navegador:
-
-```text
-http://localhost:8080
-```
+O projeto pode ser acessado seguindo o link abaixo:
+https://gutierreoliveira91.github.io/Projeto_Emendas_Parlamentares
 
 ## Organização do código
 
