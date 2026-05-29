@@ -74,7 +74,7 @@ https://observablehq.com/d/bc75e277cef509db
 ## Como executar o projeto
 
 O projeto pode ser acessado seguindo o link abaixo:
-https://gutierreoliveira91.github.io/Projeto_Emendas_Parlamentares
+https://gutierreoliveira91.github.io/Projeto_Emendas_Parlamentares_2026/
 
 ## Organização do código
 
